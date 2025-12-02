@@ -2,6 +2,7 @@ import LoadingSkeleton from "@/components/LoadingSkeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { useGeolocation } from "@/Hooks/useGeolocation"
+import { useWeatherQuery } from "@/Hooks/useWeather";
 import { AlertTriangle, MapPin } from "lucide-react";
 
 const WeatherHome = () => {
@@ -13,7 +14,14 @@ const WeatherHome = () => {
         isLoading: locationLoading
      } = useGeolocation();
 
-     console.log(coordinates)
+     
+     const weatherQuery = useWeatherQuery(coordinates);
+     
+     console.log(weatherQuery.data);
+     
+     const handleRefresh = () => {
+        getLocation();
+     }
 
 
      if(locationLoading) {
