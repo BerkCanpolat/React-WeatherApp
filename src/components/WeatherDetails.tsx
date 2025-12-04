@@ -53,7 +53,7 @@ const WeatherDetails = ({ weatherDetails }: WeatherDetailsProps) => {
     <section className="grid grid-cols-2 mt-5 gap-4">
       {details.map((det, i) => {
         return (
-        <Card key={i} className="">
+        <Card key={i} className="hover:bg-gray-200 dark:hover:bg-white/10">
           <CardContent>
             <div className="flex items-center gap-3.5">
                 <det.icon className={`w-8 h-8 ${det.color}`} />

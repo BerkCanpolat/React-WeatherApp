@@ -62,7 +62,7 @@ const ForecastWeather = ({ forecastWeather, currentWeather }: ForecastWeatherPro
         </CardHeader>
         <CardContent className="w-full md:w-[720px]">
             {nextDays.map((day,i) => {
-                return <div key={i} className="w-full min-w-full border rounded-[10px] mb-5 p-4 flex flex-col items-center md:flex-row md:items-center md:justify-between hover:bg-gray-200 dark:hover:bg-white/5">
+                return <div key={i} className="w-full min-w-full border rounded-[10px] mb-5 p-4 flex flex-col items-center md:flex-row md:items-center md:justify-between hover:bg-gray-200 dark:hover:bg-white/5 h-25">
                         <div className="max-w-[100px] md:max-w-[50px] max-sm:mb-2 md:mr-1.5">
                         <img src={`https://openweathermap.org/img/wn/${weatherCondition.icon}@4x.png`}  alt={weatherCondition.description} className="w-full object-contain" />
                         </div>

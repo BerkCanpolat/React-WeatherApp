@@ -1,5 +1,6 @@
 import CurrentWeather from "@/components/CurrentWeather";
 import ForecastWeather from "@/components/ForecastWeather";
+import HourlyTemperature from "@/components/HourlyTemperature";
 import LoadingSkeleton from "@/components/LoadingSkeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
@@ -93,6 +94,7 @@ const WeatherHome = () => {
         <div className="w-full px-5 md:flex-1 md:px-0">
             <CurrentWeather currentWeather={weatherQuery.data} reverseName={reverseName}/>
             <WeatherDetails weatherDetails={weatherQuery.data}/>
+            <HourlyTemperature hourlyForecast={forecastQuery.data}/>
         </div>
 
         {/* right */}
