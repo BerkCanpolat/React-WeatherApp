@@ -6,6 +6,7 @@ export const WEATHER_KEYS = {
     weather: (coords: Coordinates) => ["weather", coords] as const,
     forecast: (coords: Coordinates) => ["forecast", coords] as const,
     reverse: (coords: Coordinates) => ["reverse", coords] as const,
+    query: (query: string) => ["query", query] as const,
 } as const;
 
 export function useWeatherQuery(coords: Coordinates | null) {
@@ -29,5 +30,13 @@ export function useReverseQuery(coords: Coordinates | null) {
         queryKey: WEATHER_KEYS.reverse(coords ?? {lat: 0, lon: 0}),
         queryFn: () => coords ? serviceManager.geocoding.reverse(coords) : null,
         enabled: !!coords
+    });
+}
+
+export function useSearchQuery(query: string) {
+    return useQuery({
+        queryKey: WEATHER_KEYS.query(query),
+        queryFn: () => serviceManager.geocoding.search(query),
+        enabled: query.length >= 3,
     });
 }

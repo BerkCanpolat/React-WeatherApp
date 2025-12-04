@@ -3,6 +3,7 @@ import { Heart, Moon, Sun } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Modal from "./Modal";
+import Search from "./Search";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -19,6 +20,7 @@ const Header = () => {
           </h1>
         </Link>
         <div className="flex items-center gap-5">
+          <Search />
           <Heart className="cursor-pointer" onClick={() => setOpenModal(true)}/>
           <div
             onClick={() => setTheme(isDark ? "light" : "dark")}
