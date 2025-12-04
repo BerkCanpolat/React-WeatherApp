@@ -50,7 +50,7 @@ const WeatherDetails = ({ weatherDetails }: WeatherDetailsProps) => {
   ];
 
   return (
-    <section className="grid grid-cols-2 mt-5 gap-4">
+    <section className="grid md:grid-cols-2 mt-5 gap-4">
       {details.map((det, i) => {
         return (
         <Card key={i} className="hover:bg-gray-200 dark:hover:bg-white/10">

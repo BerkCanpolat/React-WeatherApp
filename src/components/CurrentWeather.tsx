@@ -17,7 +17,7 @@ const CurrentWeather = ({ currentWeather, reverseName }: CurrentWeatherProps) =>
   const formatTemp = (temp: number) => `${Math.round(temp)}°`;
 
   return (
-    <Card className="p-0">
+    <Card className="p-5 md:p-0">
       <CardContent className="md:p-6">
         <div className="flex flex-col md:flex-row items-center justify-between">
 

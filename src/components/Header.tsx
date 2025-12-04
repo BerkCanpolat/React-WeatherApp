@@ -1,12 +1,16 @@
 import { useTheme } from "@/context/ThemeProvider";
 import { Heart, Moon, Sun } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import Modal from "./Modal";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
+  const [openModal, setOpenModal] = useState<boolean>(false);
   const isDark = theme === "dark";
 
   return (
+    <>
     <header className="sticky top-0 w-full border-b bg-background/95 backdrop-blur py-3.5 md:py-6 supports-backdrop-filter:bg-background/60">
       <div className="flex items-center justify-between container mx-auto max-sm:px-5">
         <Link to={"/"}>
@@ -15,7 +19,7 @@ const Header = () => {
           </h1>
         </Link>
         <div className="flex items-center gap-5">
-          <Heart className="cursor-pointer" />
+          <Heart className="cursor-pointer" onClick={() => setOpenModal(true)}/>
           <div
             onClick={() => setTheme(isDark ? "light" : "dark")}
             className={`cursor-pointer flex items-center gap-3 border-[0.5px] overflow-hidden pt-2 pb-2 pr-2.5 pl-2.5 rounded ${
@@ -53,6 +57,10 @@ const Header = () => {
         </div>
       </div>
     </header>
+
+      <Modal open={openModal} onClose={() => setOpenModal(false)} />
+    
+    </>
   );
 };
 
