@@ -3,6 +3,7 @@ import ForecastWeather from "@/components/ForecastWeather";
 import LoadingSkeleton from "@/components/LoadingSkeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
+import WeatherDetails from "@/components/WeatherDetails";
 import { useGeolocation } from "@/Hooks/useGeolocation"
 import { useForeacstQuery, useReverseQuery, useWeatherQuery } from "@/Hooks/useWeather";
 import { AlertTriangle, MapPin, RefreshCw } from "lucide-react";
@@ -91,6 +92,7 @@ const WeatherHome = () => {
         {/* left */}
         <div className="w-full px-5 md:flex-1 md:px-0">
             <CurrentWeather currentWeather={weatherQuery.data} reverseName={reverseName}/>
+            <WeatherDetails weatherDetails={weatherQuery.data}/>
         </div>
 
         {/* right */}

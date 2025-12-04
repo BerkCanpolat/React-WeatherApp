@@ -56,7 +56,7 @@ const ForecastWeather = ({ forecastWeather, currentWeather }: ForecastWeatherPro
 
   return (
     <section>
-      <Card>
+      <Card className="pb-10">
         <CardHeader>
           <CardTitle>5-Day Forecast</CardTitle>
         </CardHeader>
