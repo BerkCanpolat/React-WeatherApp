@@ -7,10 +7,10 @@ const Header = () => {
   const isDark = theme === "dark";
 
   return (
-    <header className="sticky top-0 w-full border-b bg-background/95 backdrop-blur py-6 supports-backdrop-filter:bg-background/60">
-      <div className="flex items-center justify-between container mx-auto">
+    <header className="sticky top-0 w-full border-b bg-background/95 backdrop-blur py-3.5 md:py-6 supports-backdrop-filter:bg-background/60">
+      <div className="flex items-center justify-between container mx-auto max-sm:px-5">
         <Link to={"/"}>
-          <h1 className="md:text-lg cursor-pointer font-semibold">
+          <h1 className="md:text-lg cursor-pointer font-bold">
             WeatherApp
           </h1>
         </Link>

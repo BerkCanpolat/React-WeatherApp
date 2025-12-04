@@ -9,7 +9,7 @@ export class GeocodingService extends BaseService implements IGecocodingService{
     }
 
     reverse(coords: Coordinates): Promise<GeocodingResponse[]> {
-        return this.http.get("/reverse", {
+        return this.http.get("reverse", {
             lat: coords.lat,
             lon: coords.lon,
             limit: 1,
@@ -18,7 +18,7 @@ export class GeocodingService extends BaseService implements IGecocodingService{
     }
 
     search(query: string): Promise<GeocodingResponse[]> {
-        return this.http.get("/direct", {
+        return this.http.get("direct", {
             q: query,
             limit: 5,
             appid: API_CONFIG.KEY

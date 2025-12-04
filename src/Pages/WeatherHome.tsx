@@ -1,9 +1,11 @@
+import CurrentWeather from "@/components/CurrentWeather";
+import ForecastWeather from "@/components/ForecastWeather";
 import LoadingSkeleton from "@/components/LoadingSkeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { useGeolocation } from "@/Hooks/useGeolocation"
-import { useWeatherQuery } from "@/Hooks/useWeather";
-import { AlertTriangle, MapPin } from "lucide-react";
+import { useForeacstQuery, useReverseQuery, useWeatherQuery } from "@/Hooks/useWeather";
+import { AlertTriangle, MapPin, RefreshCw } from "lucide-react";
 
 const WeatherHome = () => {
 
@@ -16,6 +18,8 @@ const WeatherHome = () => {
 
      
      const weatherQuery = useWeatherQuery(coordinates);
+     const forecastQuery = useForeacstQuery(coordinates);
+     const reverseQuery = useReverseQuery(coordinates);
      
      console.log(weatherQuery.data);
      
@@ -59,10 +63,41 @@ const WeatherHome = () => {
     )
   }
 
+  const reverseName = reverseQuery.data?.[0];
+
+  if(weatherQuery.error || forecastQuery.error) {
+    return (
+      <Alert variant={"destructive"}>
+      <AlertTriangle className="h-4 w-4" />
+      <AlertTitle className="h-4 w-4">Error</AlertTitle>
+      <AlertDescription className="flex flex-col gap-4">
+        <p>Failed to fetch weather data. Please try again.</p>
+        <Button onClick={handleRefresh} variant={"outline"} className="w-fit">
+          <RefreshCw className="mr-2 h-4 w-4"/>
+          Retry
+        </Button>
+      </AlertDescription>
+    </Alert>
+    );
+  }
+
+  if(!weatherQuery.data || !forecastQuery.data) {
+    return <LoadingSkeleton />;
+  }
+
   return (
-    <div>
-        <h1>Deneme</h1>
-    </div>
+    <section className="flex flex-col md:flex-row items-start gap-15">
+
+        {/* left */}
+        <div className="w-full px-5 md:flex-1 md:px-0">
+            <CurrentWeather currentWeather={weatherQuery.data} reverseName={reverseName}/>
+        </div>
+
+        {/* right */}
+        <div className="w-full md:flex-1 px-5 md:px-0">
+            <ForecastWeather forecastWeather={forecastQuery.data} currentWeather={weatherQuery.data} />
+        </div>
+    </section>
   )
 }
 
