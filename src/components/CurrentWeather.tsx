@@ -24,9 +24,9 @@ const CurrentWeather = ({ currentWeather, reverseName }: CurrentWeatherProps) =>
           <div>
             
             <div className="flex items-end gap-1 mb-1.5">
-              <h1 className="text-3xl font-semibold">{reverseName?.name},</h1>
+              <h1 className="text-3xl font-semibold">{reverseName?.name}</h1>
               {reverseName?.state && (
-                  <p className="text-sm text-muted-foreground font-bold">{reverseName.state}</p>
+                  <p className="text-sm text-muted-foreground font-bold">, {reverseName.state}</p>
               )}
             </div>
 
