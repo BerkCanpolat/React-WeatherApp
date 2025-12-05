@@ -54,7 +54,7 @@ Sonner - Notification and toast system
 
 
 
-
+--------
 
 
 Project Structure
@@ -69,7 +69,7 @@ src/
 
 
 
-
+--------
 
 
 
@@ -86,7 +86,7 @@ Improving code maintainability with the service layer and custom hooks
 Implementing user-focused state management such as favorites and search history
 
 
-
+--------
 
 
 Live Demo -> https://weatherapp-berk.netlify.app
@@ -124,7 +124,7 @@ WeatherApp, kullanıcıların mevcut konumlarını veya aradıkları şehirleri 
 
 
 
-
+--------
 
 
 
@@ -150,7 +150,7 @@ Sonner - Bildirim ve toast sistemi
 
 
 
-
+--------
 
 
 Proje Yapısı
@@ -165,7 +165,7 @@ src/
 
 
 
-
+--------
 
 
 
