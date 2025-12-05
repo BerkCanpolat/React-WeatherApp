@@ -29,10 +29,7 @@ WeatherApp is a React-based web application that allows users to view real-time 
 🛠️ Service Layer: Clean and manageable service layer for API calls.
 
 
-
-
-
-
+--------
 
 
 🛠️ Technologies Used
