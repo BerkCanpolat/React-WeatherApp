@@ -1,73 +1,153 @@
-# React + TypeScript + Vite
+WeatherApp 🌤️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ENG
+--------------------------------
 
-Currently, two official plugins are available:
+A modern, responsive, and user-focused weather application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+WeatherApp is a React-based web application that allows users to view real-time and 5-day weather information using their current location or the cities they search for. This project was developed to improve my skills and gain experience with modern frontend technologies.
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🌍 Current Location Weather: Displays real-time weather information with browser location permission.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+📅 5-Day Forecast: Shows daily weather forecasts and statistics.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🔍 City Search: Search for cities and be redirected to their detail pages.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+❤️ Favorites: Add cities to favorites, track your favorites list and total count.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🕑 Search History: Previous searches and favorites are displayed in the search panel.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+📱 Mobile Compatible: Responsive and mobile-friendly design.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🛠️ Service Layer: Clean and manageable service layer for API calls.
+
+
+
+
+🛠️ Technologies Used
+
+React.js - UI development
+
+TypeScript - Type safety and scalability
+
+Tailwind CSS - Modern and fast styling
+
+React Query - Managing API data and caching
+
+ShadCN UI - UI components
+
+React Router - Page routing
+
+date-fns - Date and time formatting
+
+Framer Motion - Animations and transitions
+
+Sonner - Notification and toast system
+
+
+Project Structure
+
+src/
+├─ Api/          # Service and API calls
+├─ components/   # UI components
+├─ Hooks/        # Custom hooks (useFavorite, useWeatherQuery, etc.)
+├─ pages/        # Pages (WeatherCityDetails, Home, etc.)
+├─ context/      # Theme and global state context
+└─ App.tsx       # Root component
+
+
+✨ Lessons Learned and Experiences
+
+Managing API data and implementing caching strategies with React Query
+
+Creating modern and responsive designs with Tailwind and ShadCN UI
+
+Ensuring type safety in the project with TypeScript
+
+Improving code maintainability with the service layer and custom hooks
+
+Implementing user-focused state management such as favorites and search history
+
+
+Live Demo -> https://weatherapp-berk.netlify.app
+
+Note: Screenshots at the end of the readme.
+
+
+
+
+TR
+--------------------------------
+Modern, responsive ve kullanıcı odaklı hava durumu uygulaması.
+
+WeatherApp, kullanıcıların mevcut konumlarını veya aradıkları şehirleri kullanarak anlık ve 5 günlük hava durumu bilgilerini görebilecekleri bir React tabanlı web uygulamasıdır. Bu proje, kendimi geliştirmek ve modern frontend teknolojilerini deneyimlemek amacıyla geliştirilmiştir.
+
+
+🚀 Özellikler
+
+🌍 Mevcut Konum Hava Durumu: Tarayıcı konum izni ile anlık hava durumu bilgilerini gösterir.
+
+📅 5 Günlük Tahmin: Günlük hava durumu tahminlerini ve istatistiklerini gösterir.
+
+🔍 Şehir Arama: Şehir arayabilir ve detay sayfasına yönlendirilebilir.
+
+❤️ Favoriler: Şehirleri favorilere ekleyebilir, favori listesi ve toplam sayısı takip edilebilir.
+
+🕑 Arama Geçmişi: Önceki aramalar ve favoriler arama panelinde gösterilir.
+
+📱 Mobil Uyumlu: Responsive ve mobil dostu tasarım.
+
+🛠️ Servis Katmanı: API çağrıları için temiz ve yönetilebilir servis katmanı.
+
+
+🛠️ Kullanılan Teknolojiler
+
+React.js - UI geliştirme
+
+TypeScript - Tip güvenliği ve ölçeklenebilirlik
+
+Tailwind CSS - Modern ve hızlı stil oluşturma
+
+React Query - API verilerini yönetmek ve önbellekleme
+
+ShadCN UI - UI bileşenleri
+
+React Router - Sayfa yönlendirmeleri
+
+date-fns - Tarih ve saat formatlama
+
+Framer Motion - Animasyonlar ve geçişler
+
+Sonner - Bildirim ve toast sistemi
+
+
+Proje Yapısı
+
+src/
+├─ Api/          # Servis ve API çağrıları
+├─ components/   # UI bileşenleri
+├─ Hooks/        # Custom hooks (useFavorite, useWeatherQuery vb.)
+├─ pages/        # Sayfalar (WeatherCityDetails, Home vb.)
+├─ context/      # Theme ve global state context
+└─ App.tsx       # Root component
+
+
+
+✨ Öğrenilenler ve Deneyimler
+
+React Query ile API verilerini yönetmek ve önbellekleme stratejilerini uygulamak
+
+Tailwind ve ShadCN UI ile modern ve responsive tasarım oluşturmak
+
+TypeScript ile projede tip güvenliğini sağlamak
+
+Servis katmanı ve custom hook’lar ile kodun yönetilebilirliğini artırmak
+
+Favori ve arama geçmişi gibi kullanıcı odaklı state yönetimi uygulamak
+
+
+🌐 Canlı Demo -> https://weatherapp-berk.netlify.app
