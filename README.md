@@ -9,6 +9,9 @@ WeatherApp is a React-based web application that allows users to view real-time 
 
 
 
+
+
+
 🚀 Features
 
 🌍 Current Location Weather: Displays real-time weather information with browser location permission.
@@ -24,6 +27,10 @@ WeatherApp is a React-based web application that allows users to view real-time 
 📱 Mobile Compatible: Responsive and mobile-friendly design.
 
 🛠️ Service Layer: Clean and manageable service layer for API calls.
+
+
+
+
 
 
 
@@ -49,6 +56,10 @@ Framer Motion - Animations and transitions
 Sonner - Notification and toast system
 
 
+
+
+
+
 Project Structure
 
 src/
@@ -58,6 +69,11 @@ src/
 ├─ pages/        # Pages (WeatherCityDetails, Home, etc.)
 ├─ context/      # Theme and global state context
 └─ App.tsx       # Root component
+
+
+
+
+
 
 
 ✨ Lessons Learned and Experiences
@@ -73,6 +89,9 @@ Improving code maintainability with the service layer and custom hooks
 Implementing user-focused state management such as favorites and search history
 
 
+
+
+
 Live Demo -> https://weatherapp-berk.netlify.app
 
 Note: Screenshots at the end of the readme.
@@ -85,6 +104,9 @@ TR
 Modern, responsive ve kullanıcı odaklı hava durumu uygulaması.
 
 WeatherApp, kullanıcıların mevcut konumlarını veya aradıkları şehirleri kullanarak anlık ve 5 günlük hava durumu bilgilerini görebilecekleri bir React tabanlı web uygulamasıdır. Bu proje, kendimi geliştirmek ve modern frontend teknolojilerini deneyimlemek amacıyla geliştirilmiştir.
+
+
+
 
 
 🚀 Özellikler
@@ -102,6 +124,11 @@ WeatherApp, kullanıcıların mevcut konumlarını veya aradıkları şehirleri 
 📱 Mobil Uyumlu: Responsive ve mobil dostu tasarım.
 
 🛠️ Servis Katmanı: API çağrıları için temiz ve yönetilebilir servis katmanı.
+
+
+
+
+
 
 
 🛠️ Kullanılan Teknolojiler
@@ -125,6 +152,10 @@ Framer Motion - Animasyonlar ve geçişler
 Sonner - Bildirim ve toast sistemi
 
 
+
+
+
+
 Proje Yapısı
 
 src/
@@ -134,6 +165,10 @@ src/
 ├─ pages/        # Sayfalar (WeatherCityDetails, Home vb.)
 ├─ context/      # Theme ve global state context
 └─ App.tsx       # Root component
+
+
+
+
 
 
 
@@ -148,6 +183,8 @@ TypeScript ile projede tip güvenliğini sağlamak
 Servis katmanı ve custom hook’lar ile kodun yönetilebilirliğini artırmak
 
 Favori ve arama geçmişi gibi kullanıcı odaklı state yönetimi uygulamak
+
+
 
 
 🌐 Canlı Demo -> https://weatherapp-berk.netlify.app
