@@ -185,3 +185,23 @@ Favori ve arama geçmişi gibi kullanıcı odaklı state yönetimi uygulamak
 
 
 🌐 Canlı Demo -> https://weatherapp-berk.netlify.app
+
+
+
+
+
+
+https://github.com/user-attachments/assets/24a55e63-859d-4720-bdbe-0df5d10d9162
+
+
+
+
+https://github.com/user-attachments/assets/3aab6d7f-433f-4ebc-8173-c18d80d6b367
+<img width="1633" height="945" alt="Ekran Resmi 2025-12-05 10 33 00" src="https://github.com/user-attachments/assets/cd704337-512d-4fd9-a70a-05347e5a5e0c" />
+<img width="1631" height="935" alt="Ekran Resmi 2025-12-05 10 33 42" src="https://github.com/user-attachments/assets/4fd63d29-9c20-44c0-a951-f438397948bd" />
+<img width="1624" height="929" alt="Ekran Resmi 2025-12-05 10 33 57" src="https://github.com/user-attachments/assets/d4e6ef65-edff-41e2-8c62-a7283d944c08" />
+<img width="1605" height="928" alt="Ekran Resmi 2025-12-05 10 34 24" src="https://github.com/user-attachments/assets/4064e506-a528-4d43-922c-d91b45bf6fbc" />
+<img width="1619" height="935" alt="Ekran Resmi 2025-12-05 10 34 40" src="https://github.com/user-attachments/assets/aa87e2dd-e76d-4b71-9010-91dc7d110f1e" />
+
+
+
